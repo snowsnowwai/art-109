@@ -1,0 +1,111 @@
+/* css resets */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* respect user font size prefs */
+html {
+    font-size: 100%;
+}
+
+/* general css */
+body {
+    background-color: #aabdbd;
+    font-family: inherit;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+header {
+    padding: 6rem;
+    margin-bottom: 3rem;
+    /* background-color: cornflowerblue; */
+    background: #f0297f;
+    background: radial-gradient(circle, #f0297f 0%, rgba(84, 153, 232, 1) 100%);
+    text-align: center;
+    color: #1a3030;
+    border-bottom: #000 1px solid;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+nav {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    background-color: rgb(164, 186, 206);
+}
+
+nav a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: #5b1515;
+    margin: 0 1rem;
+    display: inline-block;
+}
+
+main {
+
+}
+
+.about-section,
+.portfolio-section,
+.contact-section {
+    margin-bottom: 4rem;
+}
+
+.about-content, .portfolio-content, .contact-content {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.about-content h2, .portfolio-content h2, .contact-content h2 {
+    padding: 2rem 0;
+}
+.portfolio-item {
+    margin-bottom: 3rem;
+    background-color: #90b0b0;
+    padding: 2rem;
+    text-align: justify;
+    border-radius: 0.5rem;
+    border: 2px #000 solid;
+    box-shadow: 0 4px 6px #00000066;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+.portfolio-item h3 {
+    margin: 1rem 0; 
+}
+
+.portfolio-item p {
+    font-size: 1.2rem;
+}
+
+.about-section {
+    background-color: white;
+}
+
+.portfolio-section {
+    background-color: darkcyan;
+}
+
+footer {
+    background: #577575;
+    color: aliceblue;
+    padding: 1rem;
+    text-align: right;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
