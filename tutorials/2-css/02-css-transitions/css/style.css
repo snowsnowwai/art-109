@@ -1,0 +1,37 @@
+.title {
+    font-family: inherit;
+}
+
+.square {
+    background-color: orangered;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px auto;
+    transition: all 1s;
+}
+
+.square:hover {
+    background-color: green;
+    transform: rotate(30deg);
+}
+
+.button-div {
+    text-align: center;
+}
+
+.button {
+    color: black;
+    background-color: aqua;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 1.5s;
+}
+
+.button:hover {
+    background-color: cadetblue;
+    color: white;
+    transform: scale(1.5);
+}

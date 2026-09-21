@@ -1,0 +1,98 @@
+body {
+    animation: change-color 8s infinite alternate;
+}
+
+@keyframes change-color {
+    0% {background-color: rgb(177, 149, 149);}
+    50% {background-color: pink;}
+    100% {    background-color: rgb(244, 239, 232);}
+}
+
+.title {
+    font-family: inherit;
+    text-align: center;
+    margin: 50px auto;
+    animation: skew 5s infinite alternate;
+}
+
+@keyframes skew {
+    0% {transform: skew(0deg, 0deg);}
+    100% {transform: skew(20deg, -20deg);}
+}
+
+.square {
+    background-color: orangered;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px auto;
+    transition: all 1s;
+}
+
+.square:hover {
+    background-color: green;
+    transform: rotate(30deg);
+}
+
+.button-div {
+    text-align: center;
+}
+
+.button {
+    color: black;
+    background-color: aqua;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 1.5s;
+}
+
+.button:hover {
+    background-color: cadetblue;
+    color: white;
+    transform: scale(1.5);
+}
+
+.press-div {
+    text-align: center;
+}
+
+.press {
+    color: black;
+    background-color: rgb(114, 189, 148);
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 1s;
+}
+
+.press:focus {
+    background-color: rgb(140, 95, 160);
+    color: rgb(213, 177, 177);
+    transform: scale(0.75);
+}
+
+.loading {
+    animation: stretch 5s infinite alternate;
+    background-color: rgb(169, 102, 102);
+    width: 75vw;
+}
+
+@keyframes stretch {
+    0% {width: 100px;}
+    100% {width: 75vw;}
+}
+
+.lorem {
+    animation: blah 2s infinite alternate;
+    background-color: rgb(169, 102, 102);
+    width: 75vw;
+}
+
+@keyframes blah {
+    0% {background-color: white;}
+    100% {background-color: rgb(42, 126, 126);}
+}
