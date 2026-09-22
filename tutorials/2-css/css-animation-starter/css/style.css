@@ -1,0 +1,128 @@
+/*
+CSS RESETS
+*/
+
+
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Remove default spacing */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Respect user font settings */
+html {
+  font-size: 100%;
+}
+
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ~~~~~~~~~~~our code */
+body{
+    animation: flicker 0.5s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {background-color: rgb(87, 13, 13);}
+    50% {background-color: rgb(0, 0, 0);}
+}
+
+.spider {
+    width: 0px;
+    animation: boo 3s infinite 2s;
+    margin: 0 auto;
+}
+
+@keyframes boo {
+    0% {width: 0;}
+    90% {width: 0;}
+    100% {width: 300px;}
+}
+
+.ghost {
+    width: 200px;
+    transition: all 1.5s;
+    animation: skew 5s infinite alternate;
+}
+
+.ghost:hover {
+    transform: scale(2);
+}
+
+.ghost {
+    font-family: inherit;
+    text-align: center;
+    margin: 50px auto;
+    animation: skew 5s infinite alternate;
+}
+
+/* @keyframes skew {
+    0% {transform: skew(0deg, 0deg);}
+    100% {transform: skew(20deg, -20deg);}
+} */
+
+.canvas {
+    margin: 50px auto;
+    animation: stretch 5s infinite alternate;
+}
+
+@keyframes stretch {
+    0% {width: 100px;}
+    90% {width: 100px;}
+    100% {width: 400px;}
+}
+
+.ghost2 {
+    margin: 50px auto;
+    offset-path: path(
+    "M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+  );
+    animation: move 6000ms infinite linear;
+}
+
+/* #motion-demo {
+  offset-path: path(
+    "M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+  );
+  animation: move 3000ms infinite linear;
+  width: 10px;
+  height: 10px;
+  background: red;
+}
+
+#heart {
+  width: 200px;
+  height: 200px;
+  background-color: lightpink;
+  clip-path: path(
+    "M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+  );
+} */
+
+@keyframes move {
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+
+/* @keyframes move {
+    0% {transform: translate(-200px, 0px);}
+    25% {transform: translate(-100px, 100px);}
+    50% {transform: translate(0px, 0px);}
+    75% {transform: translate(100px, -100px);}
+    100% {transform: translate(200px, 0px);}
+} */
