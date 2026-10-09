@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="container-fluid">
+            <ul class="nav">
+                <li class="active">
+                    <a href="" class="logo-link">
+                        <img class="logo-default" src="images/logo/logo.png" alt="MEOW">
+                        <img class="logo-hover" src="images/logo/logo-hover.png" alt="MEOW">
+                        <img class="logo-active" src="images/logo/logo-active.png" alt="MEOW">
+                    </a>
+                </li>
+                <li>
+                    <a href="missed-connections.html">Missed Connections</a>
+                </li>
+                <li>
+                    <a href="sour-audrey.html">Sour Audrey</a>
+                </li>
+                <li>
+                    <a href="canvas.html">Etch a Sketch</a>
+                </li>
+                <li>
+                    <a href="spiraling.html">Spiraling</a>
+                </li>
+                <li>
+                    <a href="me.html">Me!</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-layout">
+        <section class="intro">
+            <h1>
+                Welcome to Audrey's Portfolio
+            </h1>
+            <p>
+                I am a cat lover first, a student second, and an artist last. Look around to see some art I have created and pictures of my cats!
+            </p>
+        </section>
+        <section class="image-grid">
+            <a href="missed-connections.html"><img src="images/thumb/missed-connections.png" alt="Sacrifice"></a>
+            <a href="sour-audrey.html"><img src="images/thumb/sour-audrey.png" alt="Sour Audrey"></a>
+            <a href="canvas.html"><img src="images/thumb/canvas.png" alt="Etch-A-Sketch"></a>
+            <a href="spiraling.html"><img src="images/thumb/spiraling.png" alt="Spiraling"></a>
+            <a href="me.html"><img src="images/abt/me.jpg" alt="Me!"></a>
+            <a href="me.html"><img src="images/abt/kitties.jpg" alt="Jade & Ash"></a>
+        </section>
+    </main>
 </body>
 </html>

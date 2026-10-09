@@ -1,0 +1,218 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~color palette */
+:root {
+    --bg-color-1: #9da4b9;
+    --bg-color-2: #3d3a53;
+    --bg-color-3: #706d87;
+    --font: #e2bec1;
+    --accent-1: #95b5c7;
+    --accent-2: #c3bbc2;
+    --dark: #b59db9;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~css resets */
+/* change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~respect user font size prefs */
+html {
+    font-size: 100%;
+    font-family: Silkscreen;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~make imgs responsive */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~general css */
+.navbar .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color-2);
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--accent-2);
+    transition: color 0.5s ease;
+    padding: 10px;
+}
+
+.navbar .nav > li {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar .nav > li > a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.navbar .nav > li.active > a, .navbar .nav > li.active > a:hover, .navbar .nav > li.active > a:focus {
+    color: var(--dark);
+}
+
+.navbar a:hover {
+    color: var(--bg-color-3);
+    background-color: var(--accent-2);
+}
+
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+}
+
+.navbar .logo-link {
+    justify-content: center;
+}
+
+.logo-link img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-default {
+    display: inline-block;
+}
+
+.logo-hover {
+    display: none;
+    background-color: var(--accent-2);
+}
+
+.logo-active {
+    display: none;
+}
+
+.logo-link:hover .logo-hover {
+    display: none;
+}
+
+.navbar .nav > li.active .logo-default, .navbar .nav > li.active .logo-hover {
+    display: none;
+}
+
+.navbar .nav > li.active .logo-active {
+    display: inline-block;
+}
+
+body {
+    background-color: var(--accent-2);
+    color: var(--bg-color-2);
+    font-family: Silkscreen;
+}
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 40px;
+    padding: 50px;
+    align-items: start;
+}
+
+.intro-text {
+    padding: 20px 20px;
+    margin: 10px 10px;
+    display: grid;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.image-grid img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 750px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+    .image-grid img {
+        width: 500px;
+        height: 100%;
+    }
+    .navbar nav {
+        height: 100%;
+    }
+}
+
+main {
+    padding: 30px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.project-video {
+    display: block;
+    max-width: 1080px;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 750px) {
+    .navbar .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar .nav > li > a {
+        padding: 8px;
+        font-size: 12px;
+    }
+    
+    .logo-link img {
+        width: 20px;
+    }
+
+    .page-title {
+        font-size: 24px;
+        padding: 0 15px;
+    }
+    .project-video {
+        width: calc(100% - 50px);
+        max-width: 100%;
+    }
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
