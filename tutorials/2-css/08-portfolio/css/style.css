@@ -182,6 +182,11 @@ main {
     margin: 0 auto;
 }
 
+.info-text {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
 @media screen and (max-width: 750px) {
     .navbar .nav {
         flex-wrap: wrap;
@@ -205,6 +210,9 @@ main {
     .project-video {
         width: calc(100% - 50px);
         max-width: 100%;
+    }
+    .info-text {
+        font-size: 16px;
     }
 }
 
