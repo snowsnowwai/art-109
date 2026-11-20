@@ -8,8 +8,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- <nav class="navbar">
@@ -40,7 +41,23 @@
         </div>
     </nav> -->
     <main>
-        <h1 class="page-title">YOUR ART HERE</h1>
+        <header class="site-header">
+            <h1>[YOUR ART HERE]</h1>
+        <!-- <h1 class="ascii-logo" aria-label="YOUR ART HERE">
+<pre>
+▓██   ██▓ ▒█████   █    ██  ██▀███      ▄▄▄       ██▀███  ▄▄▄█████▓    ██░ ██ ▓█████  ██▀███  ▓█████ 
+ ▒██  ██▒▒██▒  ██▒ ██  ▓██▒▓██ ▒ ██▒   ▒████▄    ▓██ ▒ ██▒▓  ██▒ ▓▒   ▓██░ ██▒▓█   ▀ ▓██ ▒ ██▒▓█   ▀ 
+  ▒██ ██░▒██░  ██▒▓██  ▒██░▓██ ░▄█ ▒   ▒██  ▀█▄  ▓██ ░▄█ ▒▒ ▓██░ ▒░   ▒██▀▀██░▒███   ▓██ ░▄█ ▒▒███   
+  ░ ▐██▓░▒██   ██░▓▓█  ░██░▒██▀▀█▄     ░██▄▄▄▄██ ▒██▀▀█▄  ░ ▓██▓ ░    ░▓█ ░██ ▒▓█  ▄ ▒██▀▀█▄  ▒▓█  ▄ 
+  ░ ██▒▓░░ ████▓▒░▒▒█████▓ ░██▓ ▒██▒    ▓█   ▓██▒░██▓ ▒██▒  ▒██▒ ░    ░▓█▒░██▓░▒████▒░██▓ ▒██▒░▒████▒
+   ██▒▒▒ ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ ░ ▒▓ ░▒▓░    ▒▒   ▓▒█░░ ▒▓ ░▒▓░  ▒ ░░       ▒ ░░▒░▒░░ ▒░ ░░ ▒▓ ░▒▓░░░ ▒░ ░
+ ▓██ ░▒░   ░ ▒ ▒░ ░░▒░ ░ ░   ░▒ ░ ▒░     ▒   ▒▒ ░  ░▒ ░ ▒░    ░        ▒ ░▒░ ░ ░ ░  ░  ░▒ ░ ▒░ ░ ░  ░
+ ▒ ▒ ░░  ░ ░ ░ ▒   ░░░ ░ ░   ░░   ░      ░   ▒     ░░   ░   ░          ░  ░░ ░   ░     ░░   ░    ░   
+ ░ ░         ░ ░     ░        ░              ░  ░   ░                  ░  ░  ░   ░  ░   ░        ░  ░
+ ░ ░                                                                                                 
+</pre>
+        </h1> -->
+        </header>
         <div id="canvas_div">
             <canvas id="canvas" width="700" height="700"></canvas>
             <div style="display: flex; flex-direction: row; align-items: center; margin-left: 20px; margin-top: 20px; justify-content: center;">
@@ -71,11 +88,11 @@
                     <div class="grid-item" style="background:rgb(0, 0, 0)" onclick="changeColor('rgb(0, 0, 0)')"></div>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-right: 20px;">
-                <button class="button" onclick="javascript:clearArea();return false;" style="box-sizing: border-box; border: 3px solid rgb(0, 0, 0); width: 150px; height: 70px; padding: 0; border-radius: 15px; background-color: rgb(195, 187, 194); font-size: 15px; font-family: Silkscreen;">CLEAR</button>
-                <button class="button" onclick="javascript:saveDrawing();return false;" style="box-sizing: border-box; border: 3px solid rgb(0, 0, 0); width: 150px; height: 70px; padding: 0; border-radius: 15px; background-color: rgb(195, 187, 194); font-size: 15px; font-family: Silkscreen;">SAVE</button>
-</div>
-</div>
+                    <button class="button" onclick="javascript:clearArea();return false;" style="box-sizing: border-box; border: 3px solid rgb(0, 0, 0); width: 150px; height: 70px; padding: 0; border-radius: 15px; background-color: rgb(195, 187, 194); font-size: 15px; font-family: Silkscreen;">CLEAR</button>
+                    <button class="button" onclick="javascript:saveDrawing();return false;" style="box-sizing: border-box; border: 3px solid rgb(0, 0, 0); width: 150px; height: 70px; padding: 0; border-radius: 15px; background-color: rgb(195, 187, 194); font-size: 15px; font-family: Silkscreen;">SAVE</button>
+                </div>
             </div>
+        </div>
             <style>
                 .grid-container {
                     display: grid;
@@ -186,80 +203,115 @@
                 }
 
                 const savedDrawings = [];
-                function saveDrawing() {
-                    if (savedDrawings.length >= 3) {
-                        return;
+                    function saveDrawing() {
+                        if (savedDrawings.length >= 3) {
+                            return;
+                        }
+                        savedDrawings.push(canvas.toDataURL('image/png'));
+                        clearArea();
+                        if (savedDrawings.length === 3) {
+                            showSavedDrawings();
+                        }
                     }
-                    savedDrawings.push(canvas.toDataURL('image/png'));
-                    clearArea();
-                    if (savedDrawings.length === 3) {
-                        showSavedDrawings();
-                    }
-                }
                 const frames = [
                     { src: 'gray_frame.png', top: '19%', left: '19%', size: '62%' },
-                    { src: 'blue_frame.png', top: '23%', left: '23%', size: '54%' },
+                    { src: 'blue_frame.png', top: '18%', left: '18%', size: '64%' },
                     { src: 'gold_frame.png', top: '17%', left: '17%', size: '66%' }
-];
+                ];
 
-function showSavedDrawings() {
-    document.body.innerHTML = '';
-    document.body.style.margin = '0';
-    document.body.style.minHeight = '100vh';
-    document.body.style.display = 'flex';
-    document.body.style.alignItems = 'center';
-    document.body.style.justifyContent = 'center';
-    document.body.style.gap = '24px';
-    document.body.style.flexWrap = 'wrap';
-    document.body.style.background = '#fff';
+                function showSavedDrawings() {
+    const main = document.querySelector('main');
+    const canvasDiv = document.getElementById('canvas_div');
+
+    main.style.minHeight = '100vh';
+    main.style.display = 'flex';
+    main.style.flexDirection = 'column';
+
+    canvasDiv.innerHTML = '';
+    canvasDiv.style.position = 'relative';
+    canvasDiv.style.flex = '1';
+    canvasDiv.style.display = 'flex';
+    canvasDiv.style.alignItems = 'center';
+    canvasDiv.style.justifyContent = 'center';
+    canvasDiv.style.width = '100%';
+    canvasDiv.style.margin = '0';
+    canvasDiv.style.padding = '0';
+    canvasDiv.style.minHeight = '0';
+
+    const framesRow = document.createElement('div');
+    framesRow.style.display = 'flex';
+    framesRow.style.alignItems = 'center';
+    framesRow.style.gap = 'clamp(12px, 2vw, 24px)';
 
     savedDrawings.forEach(function (src, index) {
-    const frameInfo = frames[index];
+        const frameInfo = frames[index];
 
-    const frameBox = document.createElement('div');
-    frameBox.style.position = 'relative';
-    frameBox.style.width = '360px';
-    frameBox.style.height = '360px';
+        const frameBox = document.createElement('div');
+        frameBox.style.position = 'relative';
+        frameBox.style.width = 'min(20vw, 34vh, 360px)';
+        frameBox.style.height = 'min(20vw, 34vh, 360px)';
 
-    const drawing = document.createElement('img');
-    drawing.src = src;
-    drawing.alt = 'Saved drawing';
-    drawing.style.position = 'absolute';
-    drawing.style.top = frameInfo.top;
-    drawing.style.left = frameInfo.left;
-    drawing.style.width = frameInfo.size;
-    drawing.style.height = frameInfo.size;
+        const drawing = document.createElement('img');
+        drawing.src = src;
+        drawing.alt = 'Saved drawing';
+        drawing.style.position = 'absolute';
+        drawing.style.top = frameInfo.top;
+        drawing.style.left = frameInfo.left;
+        drawing.style.width = frameInfo.size;
+        drawing.style.height = frameInfo.size;
+        drawing.style.backgroundColor = '#FFFFFF';
 
-    const frame = document.createElement('img');
-    frame.src = frameInfo.src;
-    frame.alt = '';
-    frame.style.position = 'absolute';
-    frame.style.top = '0';
-    frame.style.left = '0';
-    frame.style.width = '100%';
-    frame.style.height = '100%';
-    frame.style.pointerEvents = 'none';
+        const frame = document.createElement('img');
+        frame.src = frameInfo.src;
+        frame.alt = '';
+        frame.style.position = 'absolute';
+        frame.style.top = '0';
+        frame.style.left = '0';
+        frame.style.width = '100%';
+        frame.style.height = '100%';
+        frame.style.pointerEvents = 'none';
 
-    frameBox.appendChild(drawing);
-    frameBox.appendChild(frame);
-    document.body.appendChild(frameBox);
+        frameBox.appendChild(drawing);
+        frameBox.appendChild(frame);
+        framesRow.appendChild(frameBox);
     });
+
+    const labelSlot = document.createElement('div');
+    labelSlot.style.position = 'absolute';
+    labelSlot.style.top = '0';
+    labelSlot.style.bottom = '0';
+    labelSlot.style.left = 'calc(50% + min(20vw, 34vh, 360px) / 2)';
+labelSlot.style.right = '0';
+    labelSlot.style.display = 'flex';
+    labelSlot.style.alignItems = 'center';
+    labelSlot.style.justifyContent = 'center';
+
+    const placard = document.createElement('img');
+    placard.src = 'label.png';
+    placard.alt = '';
+    placard.style.width = 'auto';
+    placard.style.height = 'auto';
+    placard.style.maxWidth = 'none';
+    placard.style.maxHeight = '70%';
+
+    labelSlot.appendChild(placard);
+    canvasDiv.appendChild(framesRow);
+    canvasDiv.appendChild(labelSlot);
 }
-                
-                function clearArea() {
-                    context.setTransform(1, 0, 0, 1, 0, 0);
-                    context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-                }
+                                
+                    function clearArea() {
+                        context.setTransform(1, 0, 0, 1, 0, 0);
+                        context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+                    }
 
-                function changeColor(color) {
-                    context.strokeStyle = color;
-                }
+                    function changeColor(color) {
+                        context.strokeStyle = color;
+                    }
 
-                function changeWidth(width) {
-                    context.lineWidth = width;
-                }
+                    function changeWidth(width) {
+                        context.lineWidth = width;
+                    }
             </script>
-        </div>
     </main>
 </body>
 </html>

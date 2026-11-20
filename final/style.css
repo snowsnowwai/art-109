@@ -1,0 +1,50 @@
+:root {
+    --bg-color-1: #441b2a;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+    html {
+    font-size: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.site-header {
+    background-color: transparent;
+    padding: 25px 10px;
+    text-align: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "BLED" 0, "SCAN" 0;
+    font-size: clamp(16px, 2.4vw, 40px);
+    color: #fff;
+}
+
+body {
+    background-color: var(--bg-color-1);
+}
